@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexoWeb</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 3rem; height: 65px;
+  background: rgba(10,10,9,0.85); backdrop-filter: blur(12px);
+}
+.nav-logo { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.2rem; color: #fff; text-decoration: none; letter-spacing: -1px; text-transform: uppercase; }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a { font-family: 'Inter', sans-serif; font-size: .82rem; font-weight: 300; color: #fff; text-decoration: none; letter-spacing: 1px; text-transform: uppercase; transition: opacity .2s; }
+.nav-links a:hover { opacity: .5; }
+.nav-cta { font-family: 'Inter', sans-serif; font-size: .78rem; font-weight: 400; color: #0A0A09; background: #fff; padding: .6rem 1.5rem; border-radius: 100px; text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: opacity .2s; }
+.nav-cta:hover { opacity: .85; }
+
+.hero {
+  background: #0A0A09; min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column; gap: 1.5rem;
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1800&q=80');
+  background-size: cover; background-position: center;
+  opacity: 0.12; z-index: 0;
+}
+.hero h1 { position: relative; z-index: 1; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(4rem, 12vw, 10rem); color: #fff; letter-spacing: -3px; text-transform: uppercase; line-height: 1; }
+.hero p { position: relative; z-index: 1; font-family: 'Inter', sans-serif; font-weight: 300; font-size: clamp(1rem, 2.5vw, 1.4rem); color: #fff; letter-spacing: 2px; text-transform: uppercase; }
+
+.servicios { background: #0A0A09; padding: 3rem 6rem; display: flex; align-items: center; gap: 6rem; }
+.servicios-img { flex: 1; border-radius: 12px; overflow: hidden; }
+.servicios-img img { width: 100%; height: 520px; object-fit: cover; display: block; filter: brightness(.8); border-radius: 12px; }
+.servicios-lista { flex: 1; display: flex; flex-direction: column; gap: 2.2rem; }
+.servicios-lista h2 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 3.5rem; color: #fff; letter-spacing: -2px; text-transform: uppercase; margin-bottom: .5rem; }
+.servicio h3 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: .9rem; color: #fff; text-transform: uppercase; letter-spacing: .5px; margin-bottom: .3rem; }
+.servicio p { font-family: 'Inter', sans-serif; font-weight: 300; font-size: .85rem; color: rgba(255,255,255,.6); line-height: 1.65; }
+
+/* espacio entre bloques */
+.sep { height: 6rem; background: #0A0A09; }
+
+.proceso { background: #0A0A09; padding: 3rem 6rem; display: flex; align-items: center; gap: 6rem; }
+.proceso-lista { flex: 1; display: flex; flex-direction: column; gap: 1.2rem; }
+.proceso-lista h2 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 3.5rem; color: #fff; letter-spacing: -2px; text-transform: uppercase; margin-bottom: .5rem; }
+.paso { display: flex; align-items: center; gap: 1.5rem; background: rgba(255,255,255,0.05); border-radius: 10px; padding: 1.5rem 2rem; }
+.paso-num { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 2rem; color: rgba(255,255,255,0.2); line-height: 1; flex-shrink: 0; width: 3rem; }
+.paso-body h3 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: .9rem; color: #fff; text-transform: uppercase; letter-spacing: .5px; margin-bottom: .3rem; }
+.paso-body p { font-family: 'Inter', sans-serif; font-weight: 300; font-size: .85rem; color: rgba(255,255,255,.6); line-height: 1.65; }
+.proceso-img { flex: 1; border-radius: 12px; overflow: hidden; }
+.proceso-img img { width: 100%; height: 480px; object-fit: cover; display: block; filter: brightness(.8); border-radius: 12px; }
+
+.quienes { background: #0A0A09; padding: 3rem 6rem; display: flex; align-items: center; gap: 6rem; }
+
+.contacto {
+  background: #0A0A09;
+  padding: 3rem 6rem;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  position: relative; overflow: hidden;
+}
+.contacto::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=1800&q=80');
+  background-size: cover; background-position: center;
+  opacity: 0.12; z-index: 0;
+}
+.contacto > * { position: relative; z-index: 1; }
+.contacto h2 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 3.5rem; color: #fff; letter-spacing: -2px; text-transform: uppercase; }
+.contacto p { font-family: 'Inter', sans-serif; font-weight: 300; font-size: 1rem; color: rgba(255,255,255,.7); letter-spacing: .5px; }
+
+.form-contacto {
+  display: flex; flex-direction: column; gap: 1.2rem;
+  width: 100%; max-width: 600px; margin-top: 1rem;
+  background: rgba(10,10,9,0.85);
+  padding: 2.5rem;
+  border-radius: 12px;
+}
+.form-fila { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+.form-contacto input,
+.form-contacto textarea {
+  font-family: 'Inter', sans-serif; font-weight: 300;
+  font-size: .88rem; color: #fff;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px; padding: .9rem 1.2rem;
+  outline: none; width: 100%;
+  transition: border-color .2s;
+}
+.form-contacto input::placeholder,
+.form-contacto textarea::placeholder { color: rgba(255,255,255,.35); }
+.form-contacto input:focus,
+.form-contacto textarea:focus { border-color: rgba(255,255,255,.5); }
+.form-contacto textarea { min-height: 130px; resize: vertical; }
+.btn-enviar {
+  font-family: 'Inter', sans-serif; font-weight: 500;
+  font-size: .88rem; color: #0A0A09;
+  background: #fff; border: none; cursor: pointer;
+  padding: 1rem; border-radius: 8px;
+  text-transform: uppercase; letter-spacing: 1px;
+  transition: opacity .2s;
+}
+.btn-enviar:hover { opacity: .85; }
+.quienes-img { flex: 1; border-radius: 12px; overflow: hidden; }
+.quienes-img img { width: 100%; height: 480px; object-fit: cover; display: block; filter: brightness(.8); border-radius: 12px; }
+.quienes-texto { flex: 1; display: flex; flex-direction: column; gap: 1.5rem; }
+.quienes-texto h2 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 3.5rem; color: #fff; letter-spacing: -2px; text-transform: uppercase; }
+.quienes-texto p { font-family: 'Inter', sans-serif; font-weight: 300; font-size: 1rem; color: rgba(255,255,255,.8); line-height: 1.85; }
+
+footer {
+  background: #060605;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 4rem 6rem 2rem;
+}
+.footer-top {
+  display: grid; grid-template-columns: 2fr 1fr 1fr;
+  gap: 4rem; margin-bottom: 3rem;
+}
+.footer-logo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900; font-size: 1.5rem;
+  color: #fff; letter-spacing: -1px;
+  text-transform: uppercase; margin-bottom: 1rem;
+}
+.footer-col p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300; font-size: .85rem;
+  color: rgba(255,255,255,.5); line-height: 1.7;
+}
+.footer-col h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900; font-size: .8rem;
+  color: #fff; text-transform: uppercase;
+  letter-spacing: 1px; margin-bottom: 1rem;
+}
+.footer-col a {
+  display: block; font-family: 'Inter', sans-serif;
+  font-weight: 300; font-size: .85rem;
+  color: rgba(255,255,255,.5); text-decoration: none;
+  margin-bottom: .5rem; transition: color .2s;
+}
+.footer-col a:hover { color: #fff; }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 2rem;
+  display: flex; justify-content: space-between;
+  font-family: 'Inter', sans-serif;
+  font-size: .75rem; font-weight: 300;
+  color: rgba(255,255,255,.3);
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">NexoWeb</a>
+  <ul class="nav-links">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#proceso">Proceso</a></li>
+    <li><a href="#quienes">Quiénes somos</a></li>
+  </ul>
+  <a href="#contacto" class="nav-cta">Contactar</a>
+</nav>
+
+<section class="hero">
+  <h1>NexoWeb</h1>
+  <p>La web que tú te mereces</p>
+</section>
+
+<section class="servicios" id="servicios">
+  <div class="servicios-img">
+    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=900&q=80" alt="Servicios NexoWeb">
+  </div>
+  <div class="servicios-lista">
+    <h2>Nuestros servicios</h2>
+    <div class="servicio"><h3>Diseño personalizado</h3><p>Cada web diseñada desde cero según tu imagen y tus colores. Única para tu negocio.</p></div>
+    <div class="servicio"><h3>Adaptada a móvil</h3><p>Perfecta en cualquier dispositivo. El 70% de tus clientes te buscan desde el teléfono.</p></div>
+    <div class="servicio"><h3>SEO local</h3><p>Aparece en Google cuando alguien busque tu servicio en tu zona. Desde el primer día.</p></div>
+    <div class="servicio"><h3>Velocidad y rendimiento</h3><p>Carga en menos de 2 segundos. Una web lenta es pérdida directa de clientes.</p></div>
+    <div class="servicio"><h3>Formulario de citas</h3><p>Tus clientes reservan directamente desde la web y recibes el aviso al instante.</p></div>
+    <div class="servicio"><h3>Mantenimiento mensual</h3><p>Tu web siempre actualizada y segura. Sin que tengas que preocuparte de nada.</p></div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<section class="proceso" id="proceso">
+  <div class="proceso-lista">
+    <h2>Cómo trabajamos</h2>
+    <div class="paso">
+      <div class="paso-num">01</div>
+      <div class="paso-body"><h3>Llamada inicial</h3><p>Nos cuentas tu negocio y tus objetivos. Tenemos todo claro para empezar.</p></div>
+    </div>
+    <div class="paso">
+      <div class="paso-num">02</div>
+      <div class="paso-body"><h3>Diseño</h3><p>Creamos el diseño de tu web. Tú lo apruebas antes de continuar. Nada avanza sin tu visto bueno.</p></div>
+    </div>
+    <div class="paso">
+      <div class="paso-num">03</div>
+      <div class="paso-body"><h3>Desarrollo y ajustes</h3><p>Desarrollamos la web completa y ajustamos todo hasta que quedes satisfecho al 100%.</p></div>
+    </div>
+    <div class="paso">
+      <div class="paso-num">04</div>
+      <div class="paso-body"><h3>Publicación</h3><p>Subimos la web, configuramos el dominio y el HTTPS. Tu negocio ya está online.</p></div>
+    </div>
+  </div>
+  <div class="proceso-img">
+    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80" alt="Proceso NexoWeb">
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<section class="contacto" id="contacto">
+  <h2>¿Hablamos?</h2>
+  <p>Cuéntanos tu proyecto y te respondemos en menos de 24 horas.</p>
+  <form class="form-contacto" action="https://formsubmit.co/nexowebagencia@gmail.com" method="POST">
+    <input type="hidden" name="_next" value="https://nexoweb.group">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="Nuevo contacto desde NexoWeb">
+    <div class="form-fila">
+      <input type="text" name="nombre" placeholder="Nombre" required>
+      <input type="tel" name="telefono" placeholder="Teléfono">
+    </div>
+    <input type="email" name="email" placeholder="Correo electrónico" required>
+    <input type="text" name="asunto" placeholder="Asunto">
+    <textarea name="mensaje" placeholder="Cuéntanos tu proyecto..." required></textarea>
+    <button type="submit" class="btn-enviar">Enviar mensaje</button>
+  </form>
+</section>
+
+<div class="sep"></div>
+
+<section class="quienes" id="quienes">
+  <div class="quienes-img">
+    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=900&q=80" alt="Quiénes somos NexoWeb">
+  </div>
+  <div class="quienes-texto">
+    <h2>Quiénes somos</h2>
+    <p>Somos un equipo joven especializado en diseño web para negocios locales en España. Nacimos porque vimos que miles de clínicas, autónomos y pequeños negocios perdían clientes cada día por tener una web anticuada, lenta o directamente no tener ninguna. Nuestra misión es simple: darte una web profesional, rápida y que funcione de verdad, sin que tengas que entender de tecnología ni preocuparte por nada.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-col">
+      <div class="footer-logo">NexoWeb</div>
+      <p>Diseño web profesional para negocios locales en España.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navegación</h4>
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#quienes">Quiénes somos</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <a href="mailto:nexowebagencia@gmail.com">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin-right:.5rem;vertical-align:middle"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        nexowebagencia@gmail.com
+      </a>
+      <a href="tel:+34635969937">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin-right:.5rem;vertical-align:middle"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        +34 635 969 937
+      </a>
+      <a href="https://www.instagram.com/nexo_web_" target="_blank">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin-right:.5rem;vertical-align:middle"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        @nexo_web_
+      </a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>
