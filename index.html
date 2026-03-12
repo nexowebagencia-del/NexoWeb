@@ -46,7 +46,6 @@ nav {
 .servicio h3 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: .9rem; color: #fff; text-transform: uppercase; letter-spacing: .5px; margin-bottom: .3rem; }
 .servicio p { font-family: 'Inter', sans-serif; font-weight: 300; font-size: .85rem; color: rgba(255,255,255,.6); line-height: 1.65; }
 
-/* espacio entre bloques */
 .sep { height: 6rem; background: #0A0A09; }
 
 .proceso { background: #0A0A09; padding: 3rem 6rem; display: flex; align-items: center; gap: 6rem; }
@@ -159,6 +158,94 @@ footer {
   font-family: 'Inter', sans-serif;
   font-size: .75rem; font-weight: 300;
   color: rgba(255,255,255,.3);
+}
+
+/* ===================== RESPONSIVE MÓVIL ===================== */
+@media (max-width: 768px) {
+
+  /* NAV */
+  nav {
+    padding: 0 1.5rem;
+  }
+  .nav-links {
+    display: none;
+  }
+
+  /* HERO */
+  .hero h1 {
+    font-size: clamp(3rem, 18vw, 5rem);
+    letter-spacing: -2px;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  .hero p {
+    font-size: clamp(.85rem, 3.5vw, 1.1rem);
+    text-align: center;
+    padding: 0 1.5rem;
+  }
+
+  /* SECCIONES */
+  .servicios, .proceso, .quienes {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    gap: 2.5rem;
+  }
+
+  /* Imagen de proceso va debajo en móvil */
+  .proceso {
+    flex-direction: column;
+  }
+  .proceso-img {
+    order: 2;
+  }
+  .proceso-lista {
+    order: 1;
+  }
+
+  .servicios-img img,
+  .proceso-img img,
+  .quienes-img img {
+    height: 260px;
+  }
+
+  .servicios-lista h2,
+  .proceso-lista h2,
+  .quienes-texto h2 {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+  }
+
+  /* SEPARADOR */
+  .sep { height: 2rem; }
+
+  /* CONTACTO */
+  .contacto {
+    padding: 3rem 1.5rem;
+  }
+  .contacto h2 {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+  }
+  .form-contacto {
+    padding: 1.5rem;
+  }
+  .form-fila {
+    grid-template-columns: 1fr;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 3rem 1.5rem 2rem;
+  }
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: .5rem;
+    text-align: center;
+  }
 }
 </style>
 </head>
@@ -284,6 +371,11 @@ footer {
     </div>
   </div>
   <div class="footer-bottom">
-    <span>
+    <span>© 2025 NexoWeb. Todos los derechos reservados.</span>
+    <span>Diseño web profesional en España</span>
+  </div>
+</footer>
 
+</body>
+</html>
 
