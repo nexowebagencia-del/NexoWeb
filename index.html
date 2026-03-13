@@ -4,12 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="isK0kBmfj-YZ9hplPqSskiJ4nfln6Xw8thQ_xKcfuNw" />
-<title>NexoWeb</title>
+<title>NexoWeb — Diseño Web Profesional para Negocios Locales en España</title>
+<meta name="description" content="Agencia de diseño web profesional para negocios locales en España. Webs rápidas, adaptadas a móvil y optimizadas para aparecer en Google. Para clínicas, fisioterapeutas, psicólogos, autónomos y pequeñas empresas.">
+
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="favicon.png">
 
 <!-- Open Graph -->
-<meta property="og:title" content="NexoWeb — La web que tú te mereces">
+<meta property="og:title" content="NexoWeb — Diseño Web Profesional para Negocios Locales en España">
 <meta property="og:description" content="Diseño web profesional para negocios locales en España. Rápida, adaptada a móvil y con SEO local.">
 <meta property="og:image" content="https://nexoweb.group/favicon.png">
 <meta property="og:url" content="https://nexoweb.group">
@@ -48,12 +50,14 @@ nav {
 }
 .hero h1 { position: relative; z-index: 1; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(4rem, 12vw, 10rem); color: #fff; letter-spacing: -3px; text-transform: uppercase; line-height: 1; }
 .hero p { position: relative; z-index: 1; font-family: 'Inter', sans-serif; font-weight: 300; font-size: clamp(1rem, 2.5vw, 1.4rem); color: #fff; letter-spacing: 2px; text-transform: uppercase; }
+.hero-sub { position: relative; z-index: 1; font-family: 'Inter', sans-serif; font-weight: 300; font-size: clamp(.75rem, 1.2vw, .9rem); color: rgba(255,255,255,.4); letter-spacing: 1.5px; text-transform: uppercase; text-align: center; }
 
 .servicios { background: #0A0A09; padding: 3rem 6rem; display: flex; align-items: center; gap: 6rem; }
 .servicios-img { flex: 1; border-radius: 12px; overflow: hidden; }
 .servicios-img img { width: 100%; height: 520px; object-fit: cover; display: block; filter: brightness(.8); border-radius: 12px; }
 .servicios-lista { flex: 1; display: flex; flex-direction: column; gap: 2.2rem; }
 .servicios-lista h2 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 3.5rem; color: #fff; letter-spacing: -2px; text-transform: uppercase; margin-bottom: .5rem; }
+.servicios-lista .seccion-sub { font-family: 'Inter', sans-serif; font-weight: 300; font-size: .85rem; color: rgba(255,255,255,.45); line-height: 1.7; margin-top: -.5rem; margin-bottom: .5rem; }
 .servicio h3 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: .9rem; color: #fff; text-transform: uppercase; letter-spacing: .5px; margin-bottom: .3rem; }
 .servicio p { font-family: 'Inter', sans-serif; font-weight: 300; font-size: .85rem; color: rgba(255,255,255,.6); line-height: 1.65; }
 
@@ -62,6 +66,7 @@ nav {
 .proceso { background: #0A0A09; padding: 3rem 6rem; display: flex; align-items: center; gap: 6rem; }
 .proceso-lista { flex: 1; display: flex; flex-direction: column; gap: 1.2rem; }
 .proceso-lista h2 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 3.5rem; color: #fff; letter-spacing: -2px; text-transform: uppercase; margin-bottom: .5rem; }
+.proceso-lista .seccion-sub { font-family: 'Inter', sans-serif; font-weight: 300; font-size: .85rem; color: rgba(255,255,255,.45); line-height: 1.7; margin-top: -.5rem; margin-bottom: .5rem; }
 .paso { display: flex; align-items: center; gap: 1.5rem; background: rgba(255,255,255,0.05); border-radius: 10px; padding: 1.5rem 2rem; }
 .paso-num { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 2rem; color: rgba(255,255,255,0.2); line-height: 1; flex-shrink: 0; width: 3rem; }
 .paso-body h3 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: .9rem; color: #fff; text-transform: uppercase; letter-spacing: .5px; margin-bottom: .3rem; }
@@ -194,6 +199,11 @@ footer {
     text-align: center;
     padding: 0 1.5rem;
   }
+  .hero-sub {
+    font-size: clamp(.65rem, 2.8vw, .8rem);
+    text-align: center;
+    padding: 0 1.5rem;
+  }
 
   /* SECCIONES */
   .servicios, .proceso, .quienes {
@@ -275,20 +285,22 @@ footer {
 <section class="hero">
   <h1>NexoWeb</h1>
   <p>La web que tú te mereces</p>
+  <span class="hero-sub">Diseño web profesional para negocios locales en España</span>
 </section>
 
 <section class="servicios" id="servicios">
   <div class="servicios-img">
-    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=900&q=80" alt="Servicios NexoWeb">
+    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=900&q=80" alt="Diseño web profesional para negocios locales en España — NexoWeb">
   </div>
   <div class="servicios-lista">
     <h2>Nuestros servicios</h2>
-    <div class="servicio"><h3>Diseño personalizado</h3><p>Cada web diseñada desde cero según tu imagen y tus colores. Única para tu negocio.</p></div>
-    <div class="servicio"><h3>Adaptada a móvil</h3><p>Perfecta en cualquier dispositivo. El 70% de tus clientes te buscan desde el teléfono.</p></div>
-    <div class="servicio"><h3>SEO local</h3><p>Aparece en Google cuando alguien busque tu servicio en tu zona. Desde el primer día.</p></div>
-    <div class="servicio"><h3>Velocidad y rendimiento</h3><p>Carga en menos de 2 segundos. Una web lenta es pérdida directa de clientes.</p></div>
-    <div class="servicio"><h3>Formulario de citas</h3><p>Tus clientes reservan directamente desde la web y recibes el aviso al instante.</p></div>
-    <div class="servicio"><h3>Mantenimiento mensual</h3><p>Tu web siempre actualizada y segura. Sin que tengas que preocuparte de nada.</p></div>
+    <p class="seccion-sub">Todo lo que necesita tu negocio para tener presencia online real: diseño web para clínicas, fisioterapeutas, psicólogos, nutricionistas, autónomos y pequeñas empresas.</p>
+    <div class="servicio"><h3>Diseño personalizado</h3><p>Cada web diseñada desde cero según tu imagen y tus colores. Única para tu negocio, sin plantillas genéricas que parecen de otra empresa.</p></div>
+    <div class="servicio"><h3>Adaptada a móvil</h3><p>Perfecta en cualquier dispositivo. El 70% de tus clientes te buscan desde el teléfono — tu web tiene que funcionar igual de bien en todos.</p></div>
+    <div class="servicio"><h3>SEO local</h3><p>Aparece en Google cuando alguien busque tu servicio en tu zona. Optimización para búsquedas locales integrada desde el primer día.</p></div>
+    <div class="servicio"><h3>Velocidad y rendimiento</h3><p>Carga en menos de 2 segundos. Una web lenta es pérdida directa de clientes y penalización en los resultados de Google.</p></div>
+    <div class="servicio"><h3>Formulario de citas</h3><p>Tus clientes reservan directamente desde la web y recibes el aviso al instante. Sin llamadas perdidas, sin intermediarios.</p></div>
+    <div class="servicio"><h3>Mantenimiento mensual</h3><p>Tu web siempre actualizada, segura y funcionando. Sin que tengas que preocuparte de nada técnico ni entender de servidores.</p></div>
   </div>
 </section>
 
@@ -297,9 +309,10 @@ footer {
 <section class="proceso" id="proceso">
   <div class="proceso-lista">
     <h2>Cómo trabajamos</h2>
+    <p class="seccion-sub">Un proceso claro y sin tecnicismos. Tu negocio online en menos de dos semanas, con tu aprobación en cada paso.</p>
     <div class="paso">
       <div class="paso-num">01</div>
-      <div class="paso-body"><h3>Llamada inicial</h3><p>Nos cuentas tu negocio y tus objetivos. Tenemos todo claro para empezar.</p></div>
+      <div class="paso-body"><h3>Llamada inicial</h3><p>Nos cuentas tu negocio y tus objetivos. Analizamos tu sector y a tu competencia para tener todo claro antes de empezar.</p></div>
     </div>
     <div class="paso">
       <div class="paso-num">02</div>
@@ -307,15 +320,15 @@ footer {
     </div>
     <div class="paso">
       <div class="paso-num">03</div>
-      <div class="paso-body"><h3>Desarrollo y ajustes</h3><p>Desarrollamos la web completa y ajustamos todo hasta que quedes satisfecho al 100%.</p></div>
+      <div class="paso-body"><h3>Desarrollo y ajustes</h3><p>Desarrollamos la web completa con SEO integrado y ajustamos todo hasta que quedes satisfecho al 100%.</p></div>
     </div>
     <div class="paso">
       <div class="paso-num">04</div>
-      <div class="paso-body"><h3>Publicación</h3><p>Subimos la web, configuramos el dominio y el HTTPS. Tu negocio ya está online.</p></div>
+      <div class="paso-body"><h3>Publicación</h3><p>Subimos la web, configuramos el dominio y el HTTPS. Tu negocio ya está online y visible en Google.</p></div>
     </div>
   </div>
   <div class="proceso-img">
-    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80" alt="Proceso NexoWeb">
+    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80" alt="Proceso de diseño web NexoWeb — agencia web para negocios locales">
   </div>
 </section>
 
@@ -323,7 +336,7 @@ footer {
 
 <section class="contacto" id="contacto">
   <h2>¿Hablamos?</h2>
-  <p>Cuéntanos tu proyecto y te respondemos en menos de 24 horas.</p>
+  <p>Cuéntanos tu proyecto y te respondemos en menos de 24 horas. Sin compromiso.</p>
   <form class="form-contacto" action="https://api.web3forms.com/submit" method="POST">
     <input type="hidden" name="access_key" value="c73faaa1-7b81-4066-8a65-f29dc8c9d0f7">
     <input type="hidden" name="redirect" value="https://nexoweb.group">
@@ -344,11 +357,11 @@ footer {
 
 <section class="quienes" id="quienes">
   <div class="quienes-img">
-    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=900&q=80" alt="Quiénes somos NexoWeb">
+    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=900&q=80" alt="Equipo NexoWeb — agencia de diseño web profesional en España">
   </div>
   <div class="quienes-texto">
     <h2>Quiénes somos</h2>
-    <p>Somos un equipo joven especializado en diseño web para negocios locales en España. Nacimos porque vimos que miles de clínicas, autónomos y pequeños negocios perdían clientes cada día por tener una web anticuada, lenta o directamente no tener ninguna. Nuestra misión es simple: darte una web profesional, rápida y que funcione de verdad, sin que tengas que entender de tecnología ni preocuparte por nada.</p>
+    <p>Somos un equipo joven especializado en diseño web profesional para negocios locales en España. Trabajamos con clínicas, fisioterapeutas, psicólogos, nutricionistas, autónomos y pequeñas empresas que quieren crecer en internet sin complicaciones. Nacimos porque vimos que miles de negocios perdían clientes cada día por tener una web anticuada, lenta o directamente no tener ninguna. Nuestra misión es simple: darte una página web profesional, rápida y que funcione de verdad, sin que tengas que entender de tecnología ni preocuparte por nada técnico.</p>
   </div>
 </section>
 
@@ -356,7 +369,7 @@ footer {
   <div class="footer-top">
     <div class="footer-col">
       <div class="footer-logo">NexoWeb</div>
-      <p>Diseño web profesional para negocios locales en España.</p>
+      <p>Agencia de diseño web profesional para negocios locales en España. Webs rápidas, adaptadas a móvil y optimizadas para aparecer en Google.</p>
     </div>
     <div class="footer-col">
       <h4>Navegación</h4>
@@ -383,12 +396,13 @@ footer {
   </div>
   <div class="footer-bottom">
     <span>© 2025 NexoWeb. Todos los derechos reservados.</span>
-    <span>Diseño web profesional en España</span>
+    <span>Agencia de diseño web profesional en España</span>
   </div>
 </footer>
 
 </body>
 </html>
+
 
 
 
