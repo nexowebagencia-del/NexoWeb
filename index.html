@@ -55,27 +55,20 @@ nav {
   background-image:
     linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 80px 80px;
-  z-index: 0;
+  background-size: 80px 80px; z-index: 0;
 }
 .hero-badge {
   position: relative; z-index: 1;
   display: inline-flex; align-items: center; gap: .6rem;
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 100px;
-  padding: .45rem 1.2rem;
-  font-family: 'Inter', sans-serif;
-  font-size: .75rem; font-weight: 400;
-  color: rgba(255,255,255,.6);
-  letter-spacing: 1.5px; text-transform: uppercase;
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 100px; padding: .45rem 1.2rem;
+  font-family: 'Inter', sans-serif; font-size: .75rem; font-weight: 400;
+  color: rgba(255,255,255,.6); letter-spacing: 1.5px; text-transform: uppercase;
   animation: fadeDown 0.8s ease both;
 }
 .hero-badge span {
-  width: 6px; height: 6px; background: #4ade80;
-  border-radius: 50%; display: inline-block;
-  box-shadow: 0 0 8px #4ade80;
-  animation: pulse 2s infinite;
+  width: 6px; height: 6px; background: #4ade80; border-radius: 50%;
+  display: inline-block; box-shadow: 0 0 8px #4ade80; animation: pulse 2s infinite;
 }
 @keyframes pulse {
   0%, 100% { opacity: 1; transform: scale(1); }
@@ -88,35 +81,29 @@ nav {
   letter-spacing: -3px; text-transform: uppercase; line-height: 0.95;
   animation: fadeUp 0.9s ease 0.1s both;
 }
-.hero h1 em {
-  font-style: normal; color: transparent;
-  -webkit-text-stroke: 1.5px rgba(255,255,255,0.4);
-}
+.hero h1 em { font-style: normal; color: transparent; -webkit-text-stroke: 1.5px rgba(255,255,255,0.4); }
 .hero-desc {
   position: relative; z-index: 1;
   font-family: 'Inter', sans-serif; font-weight: 300;
-  font-size: clamp(.95rem, 2vw, 1.2rem);
-  color: rgba(255,255,255,.65); line-height: 1.7; max-width: 560px;
-  animation: fadeUp 0.9s ease 0.2s both;
+  font-size: clamp(.95rem, 2vw, 1.2rem); color: rgba(255,255,255,.65);
+  line-height: 1.7; max-width: 560px; animation: fadeUp 0.9s ease 0.2s both;
 }
 .hero-desc strong { color: #fff; font-weight: 400; }
 .hero-sub {
   position: relative; z-index: 1;
   font-family: 'Inter', sans-serif; font-weight: 300;
   font-size: .78rem; color: rgba(255,255,255,.3);
-  letter-spacing: 2px; text-transform: uppercase;
-  animation: fadeUp 0.9s ease 0.3s both;
+  letter-spacing: 2px; text-transform: uppercase; animation: fadeUp 0.9s ease 0.3s both;
 }
 .hero-cta {
   position: relative; z-index: 1;
-  display: flex; gap: 1rem; align-items: center;
-  animation: fadeUp 0.9s ease 0.35s both;
+  display: flex; gap: 1rem; align-items: center; animation: fadeUp 0.9s ease 0.35s both;
 }
 .btn-primary {
   font-family: 'Inter', sans-serif; font-size: .85rem; font-weight: 400;
-  color: #0A0A09; background: #fff; padding: .85rem 2.2rem;
-  border-radius: 100px; text-decoration: none; letter-spacing: .5px;
-  text-transform: uppercase; transition: opacity .2s, transform .2s; display: inline-block;
+  color: #0A0A09; background: #fff; padding: .85rem 2.2rem; border-radius: 100px;
+  text-decoration: none; letter-spacing: .5px; text-transform: uppercase;
+  transition: opacity .2s, transform .2s; display: inline-block;
 }
 .btn-primary:hover { opacity: .88; transform: translateY(-1px); }
 .btn-secondary {
@@ -129,34 +116,81 @@ nav {
 .btn-secondary::after { content: '→'; }
 .hero-stats {
   position: relative; z-index: 1;
-  display: flex; gap: 3rem; align-items: center;
-  animation: fadeUp 0.9s ease 0.45s both;
+  display: flex; gap: 3rem; align-items: center; animation: fadeUp 0.9s ease 0.45s both;
 }
 .stat { display: flex; flex-direction: column; align-items: center; gap: .2rem; }
 .stat-num { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.8rem; color: #fff; letter-spacing: -1px; }
 .stat-label { font-family: 'Inter', sans-serif; font-size: .72rem; font-weight: 300; color: rgba(255,255,255,.35); letter-spacing: 1px; text-transform: uppercase; text-align: center; }
 .stat-div { width: 1px; height: 40px; background: rgba(255,255,255,0.1); }
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeDown {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
 
-/* ===================== SERVICIOS ===================== */
-.servicios { background: #0A0A09; padding: 3rem 6rem; display: flex; align-items: center; gap: 6rem; }
+/* ===================== ASISTENTE DE VOZ ===================== */
+.asistente { background: #0A0A09; padding: 5rem 6rem; display: flex; align-items: flex-start; gap: 6rem; }
+.asistente-img { flex: 1; border-radius: 16px; overflow: hidden; position: sticky; top: 5rem; }
+.asistente-img img { width: 100%; height: 600px; object-fit: cover; display: block; filter: brightness(.7); border-radius: 16px; }
+.asistente-contenido { flex: 1; display: flex; flex-direction: column; gap: 2rem; }
+.bloque-tag {
+  display: inline-flex; align-items: center; gap: .6rem;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 100px; padding: .4rem 1rem;
+  font-family: 'Inter', sans-serif; font-size: .72rem; font-weight: 400;
+  color: rgba(255,255,255,.5); letter-spacing: 1.5px; text-transform: uppercase;
+  width: fit-content;
+}
+.bloque-tag span {
+  width: 6px; height: 6px; background: #4ade80; border-radius: 50%;
+  box-shadow: 0 0 8px #4ade80; animation: pulse 2s infinite;
+}
+.asistente-contenido h2 {
+  font-family: 'Montserrat', sans-serif; font-weight: 900;
+  font-size: clamp(2.5rem, 4vw, 3.8rem); color: #fff;
+  letter-spacing: -2px; text-transform: uppercase; line-height: 1;
+}
+.asistente-contenido h2 em { font-style: normal; color: transparent; -webkit-text-stroke: 1.5px rgba(255,255,255,0.35); }
+.asistente-desc { font-family: 'Inter', sans-serif; font-weight: 300; font-size: .95rem; color: rgba(255,255,255,.5); line-height: 1.7; }
+.beneficios-lista { display: flex; flex-direction: column; gap: .9rem; }
+.beneficio {
+  display: flex; align-items: flex-start; gap: 1rem;
+  padding: 1.3rem 1.5rem;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 10px; transition: background .2s, border-color .2s; cursor: default;
+}
+.beneficio:hover { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.13); }
+.beneficio-icono {
+  width: 34px; height: 34px; flex-shrink: 0;
+  background: rgba(255,255,255,0.08); border-radius: 8px;
+  display: flex; align-items: center; justify-content: center; font-size: 1rem;
+}
+.beneficio-texto h3 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: .82rem; color: #fff; text-transform: uppercase; letter-spacing: .5px; margin-bottom: .25rem; }
+.beneficio-texto p { font-family: 'Inter', sans-serif; font-weight: 300; font-size: .82rem; color: rgba(255,255,255,.5); line-height: 1.6; }
+
+/* ===================== DIVISOR ===================== */
+.divisor-linea { height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent); margin: 0 6rem; }
+
+/* ===================== DISEÑO WEB ===================== */
+.servicios { background: #0A0A09; padding: 5rem 6rem; display: flex; align-items: center; gap: 6rem; }
 .servicios-img { flex: 1; border-radius: 12px; overflow: hidden; }
-.servicios-img img { width: 100%; height: 520px; object-fit: cover; display: block; filter: brightness(.8); border-radius: 12px; }
-.servicios-lista { flex: 1; display: flex; flex-direction: column; gap: 2.2rem; }
-.servicios-lista h2 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 3.5rem; color: #fff; letter-spacing: -2px; text-transform: uppercase; margin-bottom: .5rem; }
-.servicios-lista .seccion-sub { font-family: 'Inter', sans-serif; font-weight: 300; font-size: .85rem; color: rgba(255,255,255,.45); line-height: 1.7; margin-top: -.5rem; margin-bottom: .5rem; }
-.servicio h3 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: .9rem; color: #fff; text-transform: uppercase; letter-spacing: .5px; margin-bottom: .3rem; }
-.servicio p { font-family: 'Inter', sans-serif; font-weight: 300; font-size: .85rem; color: rgba(255,255,255,.6); line-height: 1.65; }
+.servicios-img img { width: 100%; height: 480px; object-fit: cover; display: block; filter: brightness(.7); border-radius: 12px; }
+.servicios-contenido { flex: 1; display: flex; flex-direction: column; gap: 1.8rem; }
+.servicios-contenido h2 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(2rem, 3vw, 2.8rem); color: #fff; letter-spacing: -2px; text-transform: uppercase; line-height: 1; }
+.servicios-contenido .asistente-desc { margin-bottom: .5rem; }
+.beneficios-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
+.beneficio-small {
+  display: flex; align-items: flex-start; gap: .8rem;
+  padding: 1rem 1.2rem; background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07); border-radius: 10px;
+  transition: background .2s, border-color .2s;
+}
+.beneficio-small:hover { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.13); }
+.beneficio-small-icono { font-size: .9rem; flex-shrink: 0; margin-top: .1rem; }
+.beneficio-small p { font-family: 'Inter', sans-serif; font-weight: 300; font-size: .8rem; color: rgba(255,255,255,.55); line-height: 1.5; }
+.beneficio-small p strong { color: #fff; font-weight: 400; display: block; margin-bottom: .15rem; font-size: .82rem; }
 
+/* ===================== SEPARADOR ===================== */
 .sep { height: 6rem; background: #0A0A09; }
 
+/* ===================== PROCESO ===================== */
 .proceso { background: #0A0A09; padding: 3rem 6rem; display: flex; align-items: center; gap: 6rem; }
 .proceso-lista { flex: 1; display: flex; flex-direction: column; gap: 1.2rem; }
 .proceso-lista h2 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 3.5rem; color: #fff; letter-spacing: -2px; text-transform: uppercase; margin-bottom: .5rem; }
@@ -168,8 +202,15 @@ nav {
 .proceso-img { flex: 1; border-radius: 12px; overflow: hidden; }
 .proceso-img img { width: 100%; height: 480px; object-fit: cover; display: block; filter: brightness(.8); border-radius: 12px; }
 
+/* ===================== QUIENES ===================== */
 .quienes { background: #0A0A09; padding: 3rem 6rem; display: flex; align-items: center; gap: 6rem; }
+.quienes-img { flex: 1; border-radius: 12px; overflow: hidden; }
+.quienes-img img { width: 100%; height: 480px; object-fit: cover; display: block; filter: brightness(.8); border-radius: 12px; }
+.quienes-texto { flex: 1; display: flex; flex-direction: column; gap: 1.5rem; }
+.quienes-texto h2 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 3.5rem; color: #fff; letter-spacing: -2px; text-transform: uppercase; }
+.quienes-texto p { font-family: 'Inter', sans-serif; font-weight: 300; font-size: 1rem; color: rgba(255,255,255,.8); line-height: 1.85; }
 
+/* ===================== CONTACTO ===================== */
 .contacto {
   background: #0A0A09; padding: 3rem 6rem;
   display: flex; flex-direction: column; align-items: center; gap: 2rem;
@@ -192,10 +233,9 @@ nav {
 }
 .form-fila { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
 .form-contacto input, .form-contacto textarea {
-  font-family: 'Inter', sans-serif; font-weight: 300;
-  font-size: .88rem; color: #fff; background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.15); border-radius: 8px;
-  padding: .9rem 1.2rem; outline: none; width: 100%; transition: border-color .2s;
+  font-family: 'Inter', sans-serif; font-weight: 300; font-size: .88rem; color: #fff;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px; padding: .9rem 1.2rem; outline: none; width: 100%; transition: border-color .2s;
 }
 .form-contacto input::placeholder, .form-contacto textarea::placeholder { color: rgba(255,255,255,.35); }
 .form-contacto input:focus, .form-contacto textarea:focus { border-color: rgba(255,255,255,.5); }
@@ -203,17 +243,11 @@ nav {
 .btn-enviar {
   font-family: 'Inter', sans-serif; font-weight: 500; font-size: .88rem;
   color: #0A0A09; background: #fff; border: none; cursor: pointer;
-  padding: 1rem; border-radius: 8px; text-transform: uppercase;
-  letter-spacing: 1px; transition: opacity .2s;
+  padding: 1rem; border-radius: 8px; text-transform: uppercase; letter-spacing: 1px; transition: opacity .2s;
 }
 .btn-enviar:hover { opacity: .85; }
 
-.quienes-img { flex: 1; border-radius: 12px; overflow: hidden; }
-.quienes-img img { width: 100%; height: 480px; object-fit: cover; display: block; filter: brightness(.8); border-radius: 12px; }
-.quienes-texto { flex: 1; display: flex; flex-direction: column; gap: 1.5rem; }
-.quienes-texto h2 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 3.5rem; color: #fff; letter-spacing: -2px; text-transform: uppercase; }
-.quienes-texto p { font-family: 'Inter', sans-serif; font-weight: 300; font-size: 1rem; color: rgba(255,255,255,.8); line-height: 1.85; }
-
+/* ===================== FOOTER ===================== */
 footer { background: #060605; border-top: 1px solid rgba(255,255,255,0.1); padding: 4rem 6rem 2rem; }
 .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 3rem; }
 .footer-logo { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.5rem; color: #fff; letter-spacing: -1px; text-transform: uppercase; margin-bottom: 1rem; }
@@ -231,12 +265,19 @@ footer { background: #060605; border-top: 1px solid rgba(255,255,255,0.1); paddi
   .hero-stats { gap: 1.5rem; }
   .stat-num { font-size: 1.4rem; }
   .hero-cta { flex-direction: column; gap: .8rem; }
-  .servicios, .proceso, .quienes { flex-direction: column; padding: 3rem 1.5rem; gap: 2.5rem; }
+  .asistente, .servicios, .proceso, .quienes { flex-direction: column; padding: 3rem 1.5rem; gap: 2.5rem; }
+  .asistente-img { position: static; }
+  .asistente-img img { height: 260px; }
+  .asistente-contenido h2 { font-size: 2.5rem; letter-spacing: -1px; }
+  .servicios-img img { height: 260px; }
+  .servicios-contenido h2 { font-size: 2rem; }
+  .beneficios-grid { grid-template-columns: 1fr; }
+  .divisor-linea { margin: 0 1.5rem; }
   .proceso { flex-direction: column; }
   .proceso-img { order: 2; }
   .proceso-lista { order: 1; }
-  .servicios-img img, .proceso-img img, .quienes-img img { height: 260px; }
-  .servicios-lista h2, .proceso-lista h2, .quienes-texto h2 { font-size: 2.5rem; letter-spacing: -1px; }
+  .proceso-img img, .quienes-img img { height: 260px; }
+  .proceso-lista h2, .quienes-texto h2 { font-size: 2.5rem; letter-spacing: -1px; }
   .sep { height: 2rem; }
   .contacto { padding: 3rem 1.5rem; }
   .contacto h2 { font-size: 2.5rem; letter-spacing: -1px; }
@@ -261,62 +302,124 @@ footer { background: #060605; border-top: 1px solid rgba(255,255,255,0.1); paddi
   <a href="#contacto" class="nav-cta">Contactar</a>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-badge">
-    <span></span>
-    Asistente de voz con IA para clínicas
-  </div>
-
+  <div class="hero-badge"><span></span>Asistente de voz con IA para clínicas</div>
   <h1>Nunca más<br>pierdas <em>una</em><br>llamada</h1>
-
-  <p class="hero-desc">
-    Mientras tú atiendes pacientes, nuestro asistente coge el teléfono,
-    <strong>responde dudas y agenda citas solo.</strong> Las 24 horas.
-  </p>
-
+  <p class="hero-desc">Mientras tú atiendes pacientes, nuestro asistente coge el teléfono, <strong>responde dudas y agenda citas solo.</strong> Las 24 horas.</p>
   <span class="hero-sub">Asistente de voz IA · Diseño web · Para negocios locales en España</span>
-
   <div class="hero-cta">
     <a href="#contacto" class="btn-primary">Quiero saber más</a>
     <a href="#asistente" class="btn-secondary">Ver servicios</a>
   </div>
-
   <div class="hero-stats">
-    <div class="stat">
-      <span class="stat-num">24/7</span>
-      <span class="stat-label">Siempre<br>disponible</span>
-    </div>
+    <div class="stat"><span class="stat-num">24/7</span><span class="stat-label">Siempre<br>disponible</span></div>
     <div class="stat-div"></div>
-    <div class="stat">
-      <span class="stat-num">0</span>
-      <span class="stat-label">Llamadas<br>perdidas</span>
-    </div>
+    <div class="stat"><span class="stat-num">0</span><span class="stat-label">Llamadas<br>perdidas</span></div>
     <div class="stat-div"></div>
-    <div class="stat">
-      <span class="stat-num">100%</span>
-      <span class="stat-label">Sin<br>interrupciones</span>
+    <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Sin<br>interrupciones</span></div>
+  </div>
+</section>
+
+<!-- ASISTENTE DE VOZ -->
+<section class="asistente" id="asistente">
+  <div class="asistente-img">
+    <img src="https://images.unsplash.com/photo-1590650153855-d9e808231d41?w=900&q=80" alt="Asistente de voz IA para clínicas — NexoWeb">
+  </div>
+  <div class="asistente-contenido">
+    <span class="bloque-tag"><span></span>Producto estrella</span>
+    <h2>Asistente<br>de voz <em>IA</em></h2>
+    <p class="asistente-desc">Tu clínica siempre atendida, sin que tengas que levantar el teléfono.</p>
+    <div class="beneficios-lista">
+      <div class="beneficio">
+        <div class="beneficio-icono">📵</div>
+        <div class="beneficio-texto">
+          <h3>Se acabó gastar tu tiempo al teléfono</h3>
+          <p>Ahora puedes dar un servicio completamente dedicado a tus pacientes, sin interrupciones ni distracciones.</p>
+        </div>
+      </div>
+      <div class="beneficio">
+        <div class="beneficio-icono">🕐</div>
+        <div class="beneficio-texto">
+          <h3>Disponible 24/7, sin preocuparte de la hora</h3>
+          <p>Ni fines de semana, ni festivos, ni fuera de horario. Tu clínica nunca estará sin atender.</p>
+        </div>
+      </div>
+      <div class="beneficio">
+        <div class="beneficio-icono">🏥</div>
+        <div class="beneficio-texto">
+          <h3>Tu clínica nunca estará sin atender</h3>
+          <p>Da igual si estás con un paciente, en una reunión o simplemente descansando. Siempre hay alguien al otro lado.</p>
+        </div>
+      </div>
+      <div class="beneficio">
+        <div class="beneficio-icono">🚫</div>
+        <div class="beneficio-texto">
+          <h3>Ningún paciente se va a la competencia</h3>
+          <p>Cada llamada sin respuesta es un paciente que llama al siguiente de la lista. Con el asistente eso no vuelve a pasar.</p>
+        </div>
+      </div>
+      <div class="beneficio">
+        <div class="beneficio-icono">💬</div>
+        <div class="beneficio-texto">
+          <h3>Recordatorios por WhatsApp automáticos</h3>
+          <p>Tus pacientes reciben un aviso antes de su cita. Menos olvidos, menos huecos vacíos en tu agenda.</p>
+        </div>
+      </div>
+      <div class="beneficio">
+        <div class="beneficio-icono">⭐</div>
+        <div class="beneficio-texto">
+          <h3>Un servicio completamente dedicado</h3>
+          <p>Cuando no tienes que estar pendiente del teléfono, puedes concentrarte en lo que de verdad importa: tus pacientes.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
+<div class="divisor-linea"></div>
+
+<!-- DISEÑO WEB -->
 <section class="servicios" id="servicios">
+  <div class="servicios-contenido">
+    <span class="bloque-tag">Complemento perfecto</span>
+    <h2>Página web<br>profesional</h2>
+    <p class="asistente-desc">Para que te encuentren en Google y conviertas visitas en pacientes.</p>
+    <div class="beneficios-grid">
+      <div class="beneficio-small">
+        <span class="beneficio-small-icono">🔍</span>
+        <p><strong>Aparece en Google</strong>Cuando alguien busca fisioterapeuta en tu zona, te encuentran a ti primero.</p>
+      </div>
+      <div class="beneficio-small">
+        <span class="beneficio-small-icono">📱</span>
+        <p><strong>Perfecta en el móvil</strong>El 70% de tus clientes te buscan desde el teléfono. Tu web funciona en todos.</p>
+      </div>
+      <div class="beneficio-small">
+        <span class="beneficio-small-icono">⚡</span>
+        <p><strong>Carga al instante</strong>Una web lenta pierde clientes antes de que vean nada. La tuya no.</p>
+      </div>
+      <div class="beneficio-small">
+        <span class="beneficio-small-icono">📋</span>
+        <p><strong>Reservas online</strong>Tus clientes reservan directamente desde la web, sin llamar.</p>
+      </div>
+      <div class="beneficio-small">
+        <span class="beneficio-small-icono">🎨</span>
+        <p><strong>Diseño único</strong>Creada desde cero para tu negocio. Sin plantillas genéricas.</p>
+      </div>
+      <div class="beneficio-small">
+        <span class="beneficio-small-icono">🔒</span>
+        <p><strong>Siempre actualizada</strong>Tu web segura y funcionando sin que tengas que hacer nada.</p>
+      </div>
+    </div>
+  </div>
   <div class="servicios-img">
     <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=900&q=80" alt="Diseño web profesional para negocios locales en España — NexoWeb">
-  </div>
-  <div class="servicios-lista">
-    <h2>Nuestros servicios</h2>
-    <p class="seccion-sub">Todo lo que necesita tu negocio para tener presencia online real: diseño web para clínicas, fisioterapeutas, psicólogos, nutricionistas, autónomos y pequeñas empresas.</p>
-    <div class="servicio"><h3>Diseño personalizado</h3><p>Cada web diseñada desde cero según tu imagen y tus colores. Única para tu negocio, sin plantillas genéricas que parecen de otra empresa.</p></div>
-    <div class="servicio"><h3>Adaptada a móvil</h3><p>Perfecta en cualquier dispositivo. El 70% de tus clientes te buscan desde el teléfono — tu web tiene que funcionar igual de bien en todos.</p></div>
-    <div class="servicio"><h3>SEO local</h3><p>Aparece en Google cuando alguien busque tu servicio en tu zona. Optimización para búsquedas locales integrada desde el primer día.</p></div>
-    <div class="servicio"><h3>Velocidad y rendimiento</h3><p>Carga en menos de 2 segundos. Una web lenta es pérdida directa de clientes y penalización en los resultados de Google.</p></div>
-    <div class="servicio"><h3>Formulario de citas</h3><p>Tus clientes reservan directamente desde la web y recibes el aviso al instante. Sin llamadas perdidas, sin intermediarios.</p></div>
-    <div class="servicio"><h3>Mantenimiento mensual</h3><p>Tu web siempre actualizada, segura y funcionando. Sin que tengas que preocuparte de nada técnico ni entender de servidores.</p></div>
   </div>
 </section>
 
 <div class="sep"></div>
 
+<!-- PROCESO -->
 <section class="proceso" id="proceso">
   <div class="proceso-lista">
     <h2>Cómo trabajamos</h2>
@@ -339,12 +442,13 @@ footer { background: #060605; border-top: 1px solid rgba(255,255,255,0.1); paddi
     </div>
   </div>
   <div class="proceso-img">
-    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80" alt="Proceso de diseño web NexoWeb — agencia web para negocios locales">
+    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80" alt="Proceso de trabajo NexoWeb — agencia web para negocios locales">
   </div>
 </section>
 
 <div class="sep"></div>
 
+<!-- CONTACTO -->
 <section class="contacto" id="contacto">
   <h2>¿Hablamos?</h2>
   <p>Cuéntanos tu proyecto y te respondemos en menos de 24 horas. Sin compromiso.</p>
@@ -366,21 +470,23 @@ footer { background: #060605; border-top: 1px solid rgba(255,255,255,0.1); paddi
 
 <div class="sep"></div>
 
+<!-- QUIENES SOMOS -->
 <section class="quienes" id="quienes">
   <div class="quienes-img">
     <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=900&q=80" alt="Equipo NexoWeb — agencia de diseño web profesional en España">
   </div>
   <div class="quienes-texto">
     <h2>Quiénes somos</h2>
-    <p>Somos un equipo joven especializado en diseño web profesional para negocios locales en España. Trabajamos con clínicas, fisioterapeutas, psicólogos, nutricionistas, autónomos y pequeñas empresas que quieren crecer en internet sin complicaciones. Nacimos porque vimos que miles de negocios perdían clientes cada día por tener una web anticuada, lenta o directamente no tener ninguna. Nuestra misión es simple: darte una página web profesional, rápida y que funcione de verdad, sin que tengas que entender de tecnología ni preocuparte por nada técnico.</p>
+    <p>Somos un equipo joven especializado en asistentes de voz con IA y diseño web profesional para negocios locales en España. Trabajamos con clínicas, fisioterapeutas, psicólogos, nutricionistas, autónomos y pequeñas empresas que quieren crecer sin complicaciones. Nacimos porque vimos que miles de negocios perdían clientes cada día por no poder atender el teléfono o por no tener presencia online. Nuestra misión es simple: darte las herramientas para que nunca pierdas un cliente, sin que tengas que entender de tecnología ni preocuparte por nada técnico.</p>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <div class="footer-top">
     <div class="footer-col">
       <div class="footer-logo">NexoWeb</div>
-      <p>Agencia de diseño web profesional para negocios locales en España. Webs rápidas, adaptadas a móvil y optimizadas para aparecer en Google.</p>
+      <p>Asistente de voz con IA y diseño web profesional para negocios locales en España. Tu clínica siempre atendida.</p>
     </div>
     <div class="footer-col">
       <h4>Navegación</h4>
@@ -410,6 +516,5 @@ footer { background: #060605; border-top: 1px solid rgba(255,255,255,0.1); paddi
 
 </body>
 </html>
-
 
 
